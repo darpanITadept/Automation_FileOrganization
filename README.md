@@ -1,9 +1,9 @@
 # Automation_FileOrganization
 A Python script to organize files in a directory based on their extensions.
 
-## Video Demonstration
+## Demonstration
 
-[![Watch the video](link-to-thumbnail-image)](link-to-video)
+Please Visit Project Wiki for Project Demonstration.
 
 ## Table of Contents
 
