@@ -2,19 +2,29 @@ import os
 import shutil
 
 
-# List File Names
 def list_directory_contents(path):
     """
     Lists the names of files in the specified directory.
+
+    Args:
+        path (str): The path of the directory.
+
+    Returns:
+        list: A list of file names in the directory.
     """
     file_names = os.listdir(path)
     print(file_names)
     return file_names
     
-# List File Extensions
 def list_file_extensions(file_names):
     """
-    Extracts and lists the file extensions from a list of file names.
+    Extracts and lists the unique file extensions from a list of file names.
+
+    Args:
+        file_names (list): A list of file names.
+
+    Returns:
+        list: A list of unique file extensions.
     """
     file_extensions = set()
     
@@ -28,8 +38,16 @@ def list_file_extensions(file_names):
     return unique_file_extensions
 
 def organize_files_by_extension(path, file_extensions, file_names):
+    """
+    Organizes files into directories based on their extensions.
+
+    Args:
+        path (str): The path of the directory.
+        file_extensions (list): A list of unique file extensions.
+        file_names (list): A list of file names.
+    """
     for extension in file_extensions:
-        # Creating a path for the new directory
+        # Create a path for the new directory
         extension_dir = os.path.join(path, extension)
         
         os.makedirs(extension_dir, exist_ok=True)
